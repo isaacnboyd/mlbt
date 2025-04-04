@@ -84,6 +84,12 @@ Execute mlbt within the container with:
 docker run -it --rm --name mlbt mlbt:latest ./target/release/mlbt
 ```
 
+> [!NOTE]
+> Use `just` to wrap docker commands for operations
+> like `just build`, `just run`, and `just watch-baseball`.
+> See justfile for current recipes.
+> Install just by following instructions [here](https://github.com/casey/just).
+
 TODO - add to crates.io
 
 ## Features
