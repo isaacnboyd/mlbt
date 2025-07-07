@@ -14,9 +14,10 @@ Check scores, standings, and stats. Even watch a live game using Gameday!
 
 - [What](#what)
 - [Installation](#installation)
-    - [Homebrew](#homebrew)
     - [Binaries](#binaries)
     - [Cargo](#cargo)
+    - [Docker](#docker)
+    - [Homebrew](#homebrew)
 - [Features](#features)
 - [Usage](#usage)
     - [Scoreboard](#scoreboard)
@@ -80,7 +81,18 @@ cargo install mlbt --path .
 
 ### Docker
 
-Build image with:
+`mlbt` [publishes docker images on ghcr](https://github.com/isaacnboyd/mlbt/pkgs/container/mlbt).
+```bash
+docker run -it --rm --name mlbt ghcr.io/isaacnboyd/mlbt
+```
+
+`mlbt` follows [semver](https://semver.org/) practices.
+You can execute individual releases explicitly.
+```bash
+docker run -it --rm --name mlbt ghcr.io/isaacnboyd/mlbt:v0.0.17
+```
+
+Alternately build the `mlbt` image with:
 
 ```bash
 docker build -t mlbt .
